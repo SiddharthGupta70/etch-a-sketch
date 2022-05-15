@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchpad</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="root-container">
+        <header>
+            <h1>Sketchpad</h1>
+        </header>
+        <main>
+            <div class="toolbar">
+                <div class="color-picker">
+                    <p>Pick Color</p>
+                    <input type="color" value="#000000">
+                </div>
+                <div class="grid-range">
+                    <p></p>
+                    <input type="range" min="1" max="128" value="32">
+                </div>
+                <div class="eraser">
+                    <button>Eraser</button>
+                </div>
+                <div class="clear-grid">
+                    <button>Clear Sketch</button>
+                </div>
+            </div>
+            <div class="grid-container"></div>
+        </main>
+        <footer>
+            <p>Made by Siddharth Gupta</p>
+        </footer>
+    </div>
+</body>
+</html>

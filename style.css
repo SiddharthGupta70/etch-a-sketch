@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.root-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 6.8rem;
+    color: dodgerblue;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.toolbar {
+    height: 200px;
+    width: 180px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.color-picker p {
+    font-size: 1.6rem;
+}
+
+.grid-range p {
+    font-size: 1.6rem;
+}
+
+.eraser button {
+    font-size: 1.6rem;
+    padding: 2px;
+}
+
+.clear-grid button {
+    font-size: 1.6rem;
+    padding: 2px;
+}
+
+.grid-container {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.grid-color {
+    background-color: red;
+}
+
+footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #696969;
+}
+
+footer p {
+    font-size: 1.6rem;
+    color: white;
+}

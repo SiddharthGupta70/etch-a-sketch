@@ -1,1 +1,1 @@
-Sketchpad app on Vanilla JS
+Sketchpad app made in vanilla JS
