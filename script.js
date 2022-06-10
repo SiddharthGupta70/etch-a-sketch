@@ -10,11 +10,15 @@ pickColor.addEventListener('input', function (e) {
     penColor = e.target.value;
 });
 
-const gridChange = document.querySelector('.grid-range input');
-gridChange.addEventListener('input', function (e) {
+const gridSlider = document.querySelector('.grid-range input');
+gridSlider.addEventListener('input', function (e) {
     gridSize = e.target.value;
-    resetColor();
     updateRange();
+});
+
+const gridChange = document.querySelector('.grid-range button');
+gridChange.addEventListener('click', function (e) {
+    resetColor();
     clearGrid();
     makeGrid();
     drawGrid();
@@ -40,21 +44,15 @@ function updateRange() {
 
 function makeGrid() {
     const grid = document.querySelector('.grid-container');
-    for (let i=0; i<gridSize; i++) {
-        const gridRow = document.createElement('div');
-        gridRow.style.cssText = 'flex:1; display: flex;';    
-        grid.appendChild(gridRow);
-        for (let j=0; j<gridSize; j++) {
-            const gridBlock = document.createElement('div');
-            gridBlock.classList.add('grid-block');
-            gridBlock.style.cssText = 'flex:1;';
-            gridRow.appendChild(gridBlock);
-        }
+    grid.setAttribute('style', 'display:grid; grid-template: repeat('+gridSize+', 1fr) / repeat('+gridSize+', 1fr);');
+    for (let i=0; i<gridSize*gridSize; i++) {
+        const gridBlock = document.createElement('div');
+        grid.appendChild(gridBlock);
     }
 }
 
 function drawGrid () {
-    const gridHover = document.querySelectorAll('.grid-block');
+    const gridHover = document.querySelectorAll('.grid-container div');
     gridHover.forEach (gridBlock => gridBlock.addEventListener ('mouseenter', function (e) {
         e.target.style.background = penColor;
     }));
