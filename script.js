@@ -1,5 +1,6 @@
 let penColor = '#000000';
-let gridSize = 32;
+let gridSize = 16;
+let mouseClick = false;
 
 updateRange();
 makeGrid();
@@ -52,9 +53,20 @@ function makeGrid() {
 }
 
 function drawGrid () {
+    window.addEventListener("mousedown", () => {
+        mouseClick = true;
+     });
+     window.addEventListener("mouseup", () => {
+        mouseClick = false;
+     });
     const gridHover = document.querySelectorAll('.grid-container div');
     gridHover.forEach (gridBlock => gridBlock.addEventListener ('mouseenter', function (e) {
-        e.target.style.background = penColor;
+        if (mouseClick) {
+            e.target.style.background = penColor;
+        }         
+    }));
+    gridHover.forEach (gridBlock => gridBlock.addEventListener ('click', function (e) {
+        e.target.style.background = penColor;       
     }));
 }
 

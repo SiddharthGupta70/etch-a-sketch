@@ -1,26 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
 }
 
 .root-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.12);
 }
 
 header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 7rem;
+    font-size: 2.6rem;
     color: dodgerblue;
-    font-style: italic;
 }
 
 main {
@@ -28,23 +38,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 100px;
 }
 
 .toolbar {
-    height: 50vh;
+    height: 54vh;
     width: 26vh;
-    border: 3px solid dodgerblue;
-    background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .toolbar > p {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: dodgerblue;
 }
@@ -57,7 +66,7 @@ main {
 }
 
 .color-picker p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 .grid-range {
@@ -68,37 +77,34 @@ main {
 }
 
 .grid-range p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 .grid-range button {
     width: fit-content;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     background-color: dodgerblue;
     padding: 6px 20px;
-    border: none;
     border-radius: 5px;
 }
 
 .eraser button {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     background-color: dodgerblue;
     padding: 6px 20px;
-    border: none;
     border-radius: 5px;    
 }
 
 .clear-grid button {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     background-color: dodgerblue;
     padding: 6px 20px;
-    border: none;
     border-radius: 5px;
 }
 
@@ -107,19 +113,27 @@ main {
     width: 70vh;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 footer {
-    height: 40px;
+    height: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #696969;
+    row-gap: 10px;
 }
 
-footer p {
-    font-size: 1.6rem;
-    color: white;
+.credits {
+    display: flex;
+    column-gap: 10px;
+}
+
+.credits > p {
+    font-size: 1.2rem;
+}
+
+.credits > a > img:hover {
+    transform: scale(1.4);
 }
